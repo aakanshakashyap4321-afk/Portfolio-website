@@ -1,0 +1,434 @@
+/* Importing google font:poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Global Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins' sans-serif;
+  scroll-behavior: smooth; /*Smooth scrolling for anchor links*/
+}
+/* Body Styles */
+body {
+  height: 100vh;
+  background: url(background.jpg), no-repeat; /*Sets background image*/
+  background-size: cover;
+
+}
+/* Styles for general section element */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+/* Style for the main content container */
+.container {
+  position: relative;
+  height: 100%;
+  background: rgba(255, 255, 255, .1);/*semi transparent background image*/
+  border: 2px solid rgba(255, 255, 255, 0.2);/*Semi transparent border*/
+  border-radius: 30px;
+  backdrop-filter: blur(30px);/*Blurry glass effect*/
+  transform: scale(0);
+  animation: zoom-in 1s ease forwards;/*Apply zoom-in aniation*/
+}
+  /* keyframes for the zoom in animation */
+@keyframes zoom-in {
+
+
+  100% {
+    transform: scale(1);
+  }
+}
+/* header styles */
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+/* Styles for animated elements */
+.animated {
+  transform: translateY(30px); /* start slightly down*/
+  opacity: 0;/*Start invisible*/
+  animation: slide-in 1s ease forwards;/*Apply slide-in animation*/
+  animation-delay: 1.5s;/*Delay before animation start*/
+  position: fixed;/*keep elements fixed during scroll*/
+}
+/* Keyframe for the slide in animation  */
+@keyframes slide-in {
+  100% {
+    transform: translateY(0);/*end at original position*/
+    opacity: 1;/*end full visible*/
+  }
+
+}
+/*logo Styles*/
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+}
+/*Navigation Link styles*/
+.navbar a {
+  font-size:2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  border-bottom: 2px solid transparent;
+
+
+}
+/*Navigation Link hover and active States*/
+.navbar a:hover,
+.navbar a.active {
+  border-color: #fff;
+
+}
+/* Menu Icon  Styels  */
+#menu-icon {
+  font-size: 3.6rem;
+  color: #fff;
+  display: none;
+}
+/* Home Section layout  */
+.home {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 50px;
+  padding: 50px 5% 0;
+  color: #fff;
+}
+/* Home deatils heading and paragraph */
+.home-detail h1 {
+  font-size: 55px;
+  line-height: 1;
+
+
+}
+
+.home-detail h2 {
+  font-size: 32px;
+}
+
+.home-detail p {
+  margin: 10px 0 20px;
+
+}
+/* Layout for download button and socila icons */
+.home-detail .download-social {
+  display: flex;
+  align-items: center;
+}
+/* Button style */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 10px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .5s;
+
+}
+/* button hover state */
+.btn:hover {
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+}
+/* Social icons container margin */
+.home-detail .social-icons {
+  margin-left: 20px;
+}
+/* Individual Social Icon Link styles */
+.home-detail .social-icons a {
+  display: inline-block;
+  padding: 8px;
+  border: 2px solid #fff;
+  border-radius: 50%;/*perfect circle*/
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+
+}
+/* Social icone hover state */
+.home-detail .social-icons a :hover {
+  background: #fff;
+  box-shadow: 0 0 10px #fff;
+  color: #333;
+}
+ /* Styling for the container that holds the main image */
+.home-image .image-box {
+  position: relative;/*implied from context*/
+  width: 28vw;/* width based on viewport width*/
+  height: 28vw;/*maintain aspect ratio*/
+  border: 2px solid #fff;
+  border-radius: 50%;/*makes box circular*/
+  box-shadow: 0 0 20px #fff;/*white glow effect*/
+  overflow: hidden;/*important for keeping the image inside the circle*/
+
+}
+/* Styles for the image inside the iamge-box */
+.home-image .image-box img {
+  position: absolute;/* Allows for easy positioning within the relative parent*/
+  display: block;
+  width: 100%;
+  object-fit: cover;/*Ensures the image the box without distortion*/
+}
+/* About Section Container */
+#About {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;/*center content horizontally*/
+  align-items: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  backdrop-filter: blur(30px);
+
+
+}
+/* General heading Style */
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+  color: #fff;
+
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+  color: #fff;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem
+}
+/* Our service Section  */
+#Our-service {
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+  backdrop-filter: blur(30px);
+  text-align: center;
+
+}
+/* Service Section Title (h2) */
+#Our-service h2 {
+  margin-bottom: 3rem;
+  font-size: 4.5rem;
+  color:#fff;
+}
+/* Service box heading 3 */
+#Our-service  .services-box h3
+{
+font-size: 1.6rem;
+}
+
+/* Service container style */
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px 0;
+}
+/* Individual service box styles */
+.services-container .services-box {
+  width: 300px;
+  padding: 30px;
+  background: rgba(255, 255, 255, .1);
+  border-radius: 2rem;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  border: 2px solid #fff;
+  transition: .5s ease;
+
+}
+/* Service box hover effect */
+.services-container .services-box:hover {
+  border-color: #fff;
+  transform: scale(1.02);
+}
+/* icon inside the service box */
+.services-box i {
+  font-size: 1.8rem;
+  color: #333;
+
+}
+/* Projects Section style */
+#Projects{
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+  backdrop-filter: blur(30px);
+  text-align: center;
+  
+
+}
+/* Project heading 2 style */
+#Projects h2{
+  margin-bottom: 3rem;
+  font-size: 4.5rem;
+  
+  text-align: center;
+  color:#fff
+}
+/* project heading 3 style */
+#Projects .project-box h3 {
+  font-size: 2rem;
+}
+/* project container style*/
+.Project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap:30px;
+}
+/* Individual project box style */
+.Project-container .project-box {
+  width: 300px;
+  padding: 30px ;
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  backdrop-filter: blur(30px);
+  text-align: center;
+  transition: .5s ease;
+
+}
+/* project box hover effect  */
+.Project-container .project-box:hover {
+  border-color: #fff;
+  transform: scale(1.02);
+
+}
+/* contact section style */
+#Contact{
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  backdrop-filter: blur(30px);
+
+}
+
+/* contact heading h2 style */
+#Contact h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 4.5rem;
+  color: #fff;
+}
+/* contact form style */
+#Contact form{
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#Contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#Contact form .input-box input,
+#Contact form textarea{
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: black;
+  border: 2px solid #fff;;
+  border-radius: .8rem;
+  margin: .5rem 0;
+  box-sizing: border-box;
+
+}
+#Contact form .input-box input{
+  width:49%;
+}
+
+/* footer section style */
+footer{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap:wrap ;
+  padding: 2rem 9%;
+  background:rgba(255, 255, 255, .1) ;
+  border-radius: 2rem;
+  border: 1px solid #fff;
+}
+/* footer section text paragraph style */
+.footer-text p {
+  font-size: 1rem;
+  color: #fff;
+}
+/* footer icon style */
+ .footer-icon a{
+  position:fixed;
+ bottom:10px;
+ right:10px;
+ background: #fff;
+ border-radius: 50%;
+ padding:10px;
+ cursor:pointer;
+ box-shadow: 0 2px 5px rgba(255, 255, 255, .3);
+} 
+/* footer icon style (i element, e.g.,font awesome arrow */
+.footer-icon a i{
+  font-size: 1rem;
+  color:#333;
+}
+/* Media Queries */
+/* first breakpoint(for larger tablets/desktop,adjusting base font sizes */
+@media (max-width: 1200px)
+{
+html{
+  font-size: 55%;
+}
+}
+/* Second breakpoint(for standard tablets/laptops) */
+@media(max-width:991px){
+  /* adjust header padding  to fit smaller screens */
+  header{
+    padding: 2rem 3%;
+  }
+  /* adjust section padding to fit smaller screens */
+  section{
+    padding: 10rem 3% 2rem;
+  }
+  /* adjust footer padding */
+  .footer{
+    padding:2rem 3%;
+  }
+}
+  
+
